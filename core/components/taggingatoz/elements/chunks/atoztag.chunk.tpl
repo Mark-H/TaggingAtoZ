@@ -1,1 +1,1 @@
-<li><a href="[[~[[+target]]? &[[+tagKeyVar]]=`[[+tagKey]]` &[[+tagVar]]=`[[+tag]]`]]" class="[[+cls]]">[[+tag]] ([[+count]] results)</a></li>
+<li><a href="[[~[[+target]]? &tag=`[[+tag]]`]]" class="[[+cls]]">[[+tag]] ([[+count]] results)</a></li>

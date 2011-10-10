@@ -105,7 +105,13 @@ $tagList = array();
 /* @var modTemplateVarResource $tag */
 foreach ($tags as $tag) {
     $v = $tag->get('value');
-    $vs = explode($scriptProperties['tvDelimiter'],$v);
+    $vs = explode('||',$v);
+    $ar = array();
+    foreach ($vs as $vs2) {
+        $a = explode(',',$vs2);
+        $ar = array_merge($ar,$a);
+    }
+    $vs = $ar;
     foreach ($vs as $key) {
         $key = trim($key);
         if (empty($key)) continue;

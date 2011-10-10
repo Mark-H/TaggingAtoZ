@@ -45,11 +45,11 @@ foreach ($snips as $sn => $sdesc) {
         else { $type = 'textfield'; }
         $snippetProperties[] = array(
             'name' => $key,
-            'desc' => 'getrelated.prop_desc.'.$key,
+            'desc' => 'taggingatoz.prop_desc.'.$key,
             'type' => $type,
             'options' => '',
             'value' => ($value != null) ? $value : '',
-            'lexicon' => 'getrelated:default'
+            'lexicon' => 'taggingatoz:default'
         );
     }
     

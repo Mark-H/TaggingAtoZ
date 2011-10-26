@@ -32,6 +32,7 @@ $path = $modx->getOption('taggingatoz.core_path',null,$modx->getOption('core_pat
 $defaults = include $path.'elements/snippets/taggingatoz.properties.php';
 $scriptProperties = array_merge($defaults,$scriptProperties);
 $debug = intval($scriptProperties['debug']);
+$scriptProperties['groups'] = (!empty($scriptProperties['groups'])) ? explode(',',$scriptProperties['groups']) : array();
 
 if ($debug) var_dump($scriptProperties);
 
@@ -138,6 +139,11 @@ if ($debug) var_dump($tagList);
 $numTags = count($tagList,1);
 $output = array();
 foreach ($tagList as $group => $groupTags) {
+    if (!empty($scriptProperties['groups'])) {
+        if (!in_array($group,$scriptProperties['groups'])) {
+            continue;
+        }
+    }
     $groupOutput = array();
     $i = 0;
     foreach ($groupTags as $tag => $count) {

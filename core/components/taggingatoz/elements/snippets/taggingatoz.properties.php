@@ -14,7 +14,7 @@ return array(
     'numericHeader' => '0-9',
     'toPlaceholder' => '',
 
-    'groups' => '0-9,f,g,h,i,j',
+    'groups' => '',
 
     'tplTag' => 'atozTag',
     'tplGroup' => 'atozGroup',

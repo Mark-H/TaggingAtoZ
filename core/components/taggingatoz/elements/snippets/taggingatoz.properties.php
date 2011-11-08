@@ -15,6 +15,10 @@ return array(
     'toPlaceholder' => '',
 
     'groups' => '',
+    'parents' => '',
+    'depth' => 10,
+    'includeDeleted' => false,
+    'includeUnpublished' => false,
 
     'tplTag' => 'atozTag',
     'tplGroup' => 'atozGroup',
